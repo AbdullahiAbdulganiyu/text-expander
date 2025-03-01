@@ -41,6 +41,12 @@ export default function App() {
   );
 }
 
-function TextExpander({ children }) {
+function TextExpander({
+  children,
+  collapsedNumWords = 0,
+  expandButtonText = "empty",
+  collapseButtonText = "empty",
+  buttonColor = "yellow",
+}) {
   return <div>{children}</div>;
 }
