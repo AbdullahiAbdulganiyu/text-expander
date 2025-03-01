@@ -3,7 +3,12 @@ import "./styles.css";
 export default function App() {
   return (
     <div>
-      <TextExpander>
+      <TextExpander
+        collapsedNumWords={10}
+        expandButtonText="show more"
+        collapseButtonText="Show less"
+        buttonColor="blue"
+      >
         Space travel is the ultimate adventure! Imagine soaring past the stars
         and exploring new worlds. It's the stuff of dreams and science fiction,
         but believe it or not, space travel is a real thing. Humans and robots
