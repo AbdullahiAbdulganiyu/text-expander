@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
+  const [expandButtonText, setExpandButtonText] = useState("Show Text");
   return (
     <div>
       <TextExpander
