@@ -47,6 +47,7 @@ function TextExpander({
   expandButtonText = "empty",
   collapseButtonText = "empty",
   buttonColor = "yellow",
+  className = "box",
 }) {
-  return <div>{children}</div>;
+  return <div className={className}>{children}</div>;
 }
