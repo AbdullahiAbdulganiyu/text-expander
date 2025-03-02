@@ -4,11 +4,7 @@ import "./styles.css";
 export default function App() {
   return (
     <div>
-      <TextExpander
-        collapsedNumWords={10}
-        collapseButtonText="Show less"
-        buttonColor="blue"
-      >
+      <TextExpander>
         Space travel is the ultimate adventure! Imagine soaring past the stars
         and exploring new worlds. It's the stuff of dreams and science fiction,
         but believe it or not, space travel is a real thing. Humans and robots
@@ -46,7 +42,6 @@ function TextExpander({
   collapseButtonText = "Show less",
   buttonColor = "#1f09cd",
   className = "box",
-  onTextClick,
   expanded = false,
 }) {
   const [isExpanded, setIsExpanded] = useState(expanded);
