@@ -2,19 +2,12 @@ import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  const [expandButtonText, setExpandButtonText] = useState("Show more");
-
-  function handleClick() {
-    setExpandButtonText("Show Less");
-  }
   return (
     <div>
       <TextExpander
         collapsedNumWords={10}
-        expandButtonText={expandButtonText}
         collapseButtonText="Show less"
         buttonColor="blue"
-        onTextClick={handleClick}
       >
         Space travel is the ultimate adventure! Imagine soaring past the stars
         and exploring new worlds. It's the stuff of dreams and science fiction,
@@ -28,7 +21,6 @@ export default function App() {
         expandButtonText="Show text"
         collapseButtonText="Collapse text"
         buttonColor="#ff6622"
-        onTextClick={handleClick}
       >
         Space travel requires some seriously amazing technology and
         collaboration between countries, private companies, and international
@@ -37,7 +29,7 @@ export default function App() {
         foot on the moon or when rovers were sent to roam around on Mars.
       </TextExpander>
 
-      <TextExpander expanded={true} className="box" onTextClick={handleClick}>
+      <TextExpander expanded={true} className="box">
         Space missions have given us incredible insights into our universe and
         have inspired future generations to keep reaching for the stars. Space
         travel is a pretty cool thing to think about. Who knows what we'll
@@ -50,7 +42,7 @@ export default function App() {
 function TextExpander({
   children,
   collapsedNumWords = 0,
-  expandButtonText = "Show more",
+  expandButtonText,
   collapseButtonText = "Show less",
   buttonColor = "blue",
   className = "box",
@@ -59,9 +51,9 @@ function TextExpander({
   return (
     <div className={className}>
       {children}
-      <span style={{ color: buttonColor }} onClick={() => onTextClick}>
+      <button style={{ color: buttonColor }} onClick={onTextClick}>
         {expandButtonText}
-      </span>
+      </button>
     </div>
   );
 }
