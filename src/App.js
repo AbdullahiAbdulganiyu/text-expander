@@ -49,5 +49,10 @@ function TextExpander({
   buttonColor = "yellow",
   className = "box",
 }) {
-  return <div className={className}>{children}</div>;
+  return (
+    <div className={className}>
+      {children}
+      <span style={{ backgroundColor: buttonColor }}>{expandButtonText}</span>
+    </div>
+  );
 }
