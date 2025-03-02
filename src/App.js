@@ -53,6 +53,15 @@ function TextExpander({
   const dispalyText = isExpanded
     ? children
     : children.split(" ").slice(0, collapsedNumWords).join(" ") + "...";
+
+  const buttonStyle = {
+    buttonColor: "none",
+    border: "none",
+    font: "inherit",
+    cursor: "pointer",
+    marginLeft: "6px",
+    color: buttonColor,
+  };
   return (
     <div className={className}>
       <span>{dispalyText}</span>
