@@ -42,7 +42,7 @@ export default function App() {
 function TextExpander({
   children,
   collapsedNumWords = 0,
-  expandButtonText,
+  expandButtonText = "Show more",
   collapseButtonText = "Show less",
   buttonColor = "blue",
   className = "box",
