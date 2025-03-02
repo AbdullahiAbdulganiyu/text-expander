@@ -55,7 +55,7 @@ function TextExpander({
     <div className={className}>
       <span>{dispalyText}</span>
       <button style={{ color: buttonColor }} onClick={onTextClick}>
-        {expandButtonText}
+        {isExpanded ? collapseButtonText : expandButtonText}
       </button>
     </div>
   );
