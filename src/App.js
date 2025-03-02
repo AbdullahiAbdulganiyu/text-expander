@@ -47,6 +47,7 @@ function TextExpander({
   buttonColor = "blue",
   className = "box",
   onTextClick,
+  expanded = false,
 }) {
   return (
     <div className={className}>
