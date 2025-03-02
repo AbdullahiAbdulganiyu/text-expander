@@ -46,13 +46,13 @@ function TextExpander({
   collapsedNumWords = 0,
   expandButtonText = "empty",
   collapseButtonText = "empty",
-  buttonColor = "yellow",
+  buttonColor = "blue",
   className = "box",
 }) {
   return (
     <div className={className}>
       {children}
-      <span style={{ backgroundColor: buttonColor }}>{expandButtonText}</span>
+      <span style={{ color: buttonColor }}>{expandButtonText}</span>
     </div>
   );
 }
