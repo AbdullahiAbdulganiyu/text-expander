@@ -3,11 +3,15 @@ import "./styles.css";
 
 export default function App() {
   const [expandButtonText, setExpandButtonText] = useState("Show Text");
+
+  function handleClick() {
+    setExpandButtonText("Show Less");
+  }
   return (
     <div>
       <TextExpander
         collapsedNumWords={10}
-        expandButtonText="show more"
+        expandButtonText={expandButtonText}
         collapseButtonText="Show less"
         buttonColor="blue"
       >
