@@ -44,7 +44,7 @@ function TextExpander({
   collapsedNumWords = 10,
   expandButtonText = "Show more",
   collapseButtonText = "Show less",
-  buttonColor = "blue",
+  buttonColor = "#1f09cd",
   className = "box",
   onTextClick,
   expanded = false,
