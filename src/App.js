@@ -49,7 +49,8 @@ function TextExpander({
   onTextClick,
   expanded = false,
 }) {
-  const dispalyText = expanded ? children : "";
+  const [isExpanded, setIsExpanded] = useState(expanded);
+  const dispalyText = isExpanded ? children : "";
   return (
     <div className={className}>
       <span>{dispalyText}</span>
