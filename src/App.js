@@ -49,9 +49,10 @@ function TextExpander({
   onTextClick,
   expanded = false,
 }) {
+  const dispalyText = expanded ? children : "";
   return (
     <div className={className}>
-      {children}
+      <span>{dispalyText}</span>
       <button style={{ color: buttonColor }} onClick={onTextClick}>
         {expandButtonText}
       </button>
